@@ -23,9 +23,9 @@ const sanitize = (names: string[]) => {
   return names.map(
     (name) =>
       name
-        .replace(/[^a-zA-Z,\-._\s]/g, "") // remove thats not alphanumeric, comma, dot, dash or whitespace
+        .replace(/[^a-zA-Z,\-._\s]/g, "") // remove everything that's not alphanumeric, comma, dot, dash, underscore or whitespace
         .replace(/[._]/g, " ") // replace dots and underscores with whitespace
-        .replace(/\s\s+/g, " ") // replace consecutive spaces
+        .replace(/\s\s+/g, " ") // remove consecutive spaces
   );
 };
 
